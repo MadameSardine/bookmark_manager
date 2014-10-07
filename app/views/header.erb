@@ -1,0 +1,23 @@
+<header>
+	<h1 id="logo">Bookmark Manager</h1>
+	<nav>
+		<ul>
+			<li><a href='/users/new' id='sign-up' class='button'>Sign up</a></li>
+			<li><a href='/sessions/new' id='sign-in' class='button'>Sign in</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<% if current_user %>
+			<h2 id="welcome-message">
+			Welcome, <%=current_user.email %>
+			</h2>
+
+			<form method="post" action="/sessions">
+				<input type="hidden" name="_method" value="delete">
+				<input type="submit" value="Sign out">
+			</form>
+			
+		<% end %>
+	</main>
+</header>

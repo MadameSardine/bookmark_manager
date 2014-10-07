@@ -1,0 +1,55 @@
+body {
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+	
+
+#picture {
+	background-image: url("http://lh5.ggpht.com/-e0d6Q8JN1B8/Tkj2WRll0vI/AAAAAAAAFCo/fYyhqQZhOhk/s9000/Book.JPG");
+	opacity: 0.8;
+	margin-top: 8%;
+  	height: 80%;
+  	z-index: -1;   
+}
+
+
+}
+
+
+header {
+	margin-top: 5%;
+	background-color: white;
+	padding-top: 3em;
+	margin-bottom: 3em;
+}
+
+header h1 {
+	font-size: 3em;
+	padding-top: 1em;
+	padding-bottom: 0.3em;
+	margin-bottom: 2em;
+	text-align: center;
+	font-color: rgb(68, 68, 68);
+	font-weight: bold;
+	border-bottom: solid 2px;
+}
+
+header nav ul {
+	display: inline;
+
+}
+
+header nav ul li {
+	float :right;
+	padding-right: 1%;
+}
+
+a.button {
+	width: 80px;
+	background-color: rgb(68, 68, 68);
+	color:white;
+	padding: 5px 10px;
+	text-align: center;
+	border-radius: 4px;
+}

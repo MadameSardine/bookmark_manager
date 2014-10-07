@@ -1,9 +1,15 @@
 <html>
 <head>
-<title>Bookmark Manager</title>
+	<title>Bookmark Manager</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/application.css">
 </head>
 <body>
-	<%= partial :welcome_message %>
-	<%= partial :flash %>
-   	<%= yield %>
+		<%= partial :header %>
+		<%= partial :flash %>
+
+	   	<%= yield %>
+	 <main id="picture">
+	 </main>
 </body>
+</html>
