@@ -1,17 +1,10 @@
 require 'sinatra'
 require 'data_mapper'
-
-env = ENV["RACK_ENV"] || "development"
-
-DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
-
 require './lib/link'
 require './lib/tag'
 require './lib/user'
-
-DataMapper.finalize
-
-DataMapper.auto_upgrade!
+require_relative 'helpers/application'
+require_relative 'data_mapper_setup'
 
 enable :sessions
 set :session_secret, 'super secret'
@@ -49,9 +42,3 @@ post '/users' do
 	redirect to('/')
 end
 
-helpers do
-
-	def current_user
-		@current_user ||=User.get(session[:user_id]) if session[:user_id]
-	end
-end
