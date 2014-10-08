@@ -18,10 +18,15 @@ body {
 
 
 header {
-	margin-top: 5%;
 	background-color: white;
 	padding-top: 3em;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
+}
+
+header h1 a {
+	text-decoration: none;
+	color: rgb(68, 68, 68);
+	font-weight: bold;
 }
 
 header h1 {
@@ -30,8 +35,6 @@ header h1 {
 	padding-bottom: 0.3em;
 	margin-bottom: 2em;
 	text-align: center;
-	font-color: rgb(68, 68, 68);
-	font-weight: bold;
 	border-bottom: solid 2px;
 }
 
@@ -45,11 +48,35 @@ header nav ul li {
 	padding-right: 1%;
 }
 
+#sign_out {
+	margin-top: -0.5em;
+
+}
+
 a.button {
-	width: 80px;
+	width: 100px;
 	background-color: rgb(68, 68, 68);
 	color:white;
 	padding: 5px 10px;
 	text-align: center;
 	border-radius: 4px;
+	font-weight: 300;
+	text-decoration: none;
+	font-size: 1em;
+	box-shadow: 10px 10px 5px #888888;
 }
+
+input[type=submit] {
+	width: 100px;
+	background-color: rgb(68, 68, 68);
+	color:white;
+	padding: 5px 10px;
+	text-align: center;
+	border-radius: 4px;
+	font-weight: 300;
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-size: 1em;
+	box-shadow: 10px 10px 5px #888888;
+	border: none;
+}
+
