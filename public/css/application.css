@@ -13,14 +13,17 @@ body {
   	z-index: -1;   
 }
 
-
+#main-header {
+	margin-bottom: 1em;
 }
 
-
-header {
-	background-color: white;
-	padding-top: 3em;
-	margin-bottom: 1em;
+#logo {
+	font-size: 3em;
+	padding-top: 1em;
+	padding-bottom: 0.3em;
+	margin-bottom: 2em;
+	text-align: center;
+	border-bottom: solid 2px;
 }
 
 header h1 a {
@@ -29,13 +32,8 @@ header h1 a {
 	font-weight: bold;
 }
 
-header h1 {
-	font-size: 3em;
-	padding-top: 1em;
-	padding-bottom: 0.3em;
-	margin-bottom: 2em;
-	text-align: center;
-	border-bottom: solid 2px;
+nav {
+	background-color: yellow;
 }
 
 header nav ul {
@@ -47,6 +45,32 @@ header nav ul li {
 	float :right;
 	padding-right: 1%;
 }
+
+#welcome-message{
+	font-size: 2em;
+}
+
+
+#flash{
+	margin-bottom: 2em;
+
+}
+
+
+#current-links{
+	font-size: 1.5em;
+	margin-bottom: 1.2em;
+	border-bottom: solid 1px;
+	padding-bottom: 1em;
+}
+
+
+h1 {
+	font-size: 2em;
+	margin-bottom: 1.2em;
+
+}
+
 
 #sign_out {
 	margin-top: -0.5em;
@@ -68,15 +92,23 @@ a.button {
 
 input[type=submit] {
 	width: 100px;
-	background-color: rgb(68, 68, 68);
-	color:white;
+	
+	color:black;
 	padding: 5px 10px;
 	text-align: center;
 	border-radius: 4px;
-	font-weight: 300;
+	font-weight: bold;
 	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	font-size: 1em;
-	box-shadow: 10px 10px 5px #888888;
-	border: none;
 }
+
+#new-link {
+	margin-top: 3em;
+}
+
+#new-user{
+	margin-top: 5%;
+
+}
+
 
