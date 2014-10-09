@@ -63,7 +63,7 @@ feature 'User signs out' do
 	end
 end
 
-feature 'User forgets password' do
+feature 'User reset password' do
 
 	before(:each) do
 		User.create(:email => "test@test.com",
@@ -74,6 +74,12 @@ feature 'User forgets password' do
 	scenario 'while being logged out' do
 		visit 'sessions/new'
 		expect(page).to have_content("I forgot my password")
+	end
+
+	scenario 'entering his email' do
+		visit 'sessions/new'
+		click_link "I forgot my password"
+		expect(page).to have_content("Please enter your email")
 	end
 
 

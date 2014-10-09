@@ -19,3 +19,7 @@ delete '/sessions' do
 	session[:user_id] = nil
 	redirect to ('/')
 end
+
+get '/sessions/reset' do
+	erb :"sessions/reset"
+end
