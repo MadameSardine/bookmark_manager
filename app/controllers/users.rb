@@ -15,3 +15,10 @@ post '/users' do
 		erb :"users/new"
 	end
 end
+
+post '/users/token' do
+	user = User.first(:email => params[:email])
+	user.password_token = (1..64).map{('A'..'Z').to_a.sample}.join
+	user.password_token_timestamp = Time.now
+	user.save
+end

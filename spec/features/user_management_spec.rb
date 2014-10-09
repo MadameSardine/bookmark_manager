@@ -82,7 +82,13 @@ feature 'User reset password' do
 		expect(page).to have_content("Please enter your email")
 	end
 
-
+	scenario 'has a password_token' do
+		visit '/sessions/reset'
+		fill_in 'email', :with => "test@test.com"
+		click_button 'Send'
+		user = User.first
+		expect(user.password_token.nil?).to eq(false)
+	end
 
 end
 
