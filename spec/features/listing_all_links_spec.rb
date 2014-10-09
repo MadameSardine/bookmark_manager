@@ -9,27 +9,31 @@ feature "User browses the list of links" do
 			:tags => [Tag.first_or_create(:text => 'education')],
 			:user => User.create(:email => "test@test.com",
 					:password => 'test',
-					:password_confirmation => 'test'))
+					:password_confirmation => 'test'),
+			:description => 'Coding bootcamp')
 		Link.create(
 			:url => "http://www.google.com",
             :title => "Google",
             :tags => [Tag.first_or_create(:text => 'search')],
             :user => User.create(:email => "test1@test.com",
 					:password => 'test',
-					:password_confirmation => 'test'))
+					:password_confirmation => 'test'),
+			:description => 'Search engine')
     	Link.create(:url => "http://www.bing.com",
             :title => "Bing",
             :tags => [Tag.first_or_create(:text => 'search')],
             :user => User.create(:email => "test2@test.com",
 					:password => 'test',
-					:password_confirmation => 'test'))
+					:password_confirmation => 'test'),
+            :description => 'Search engine')
     	Link.create(
     		:url => "http://www.code.org",
             :title => "Code.org",
             :tags => [Tag.first_or_create(:text => 'education')],
             :user => User.create(:email => "test3@test.com",
 					:password => 'test',
-					:password_confirmation => 'test'))
+					:password_confirmation => 'test'),
+            :description => 'Coding bootcamp')
 	}
 
 	scenario "when opening the home page" do
@@ -53,6 +57,11 @@ feature "User browses the list of links" do
 	scenario "submitted by user" do
 		visit '/'
 		expect(page).to have_content("Submitted by test@test.com")
+	end
+
+	scenario "seeing link description" do
+		visit '/'
+		expect(page).to have_content("Coding bootcamp")
 	end
 
 end

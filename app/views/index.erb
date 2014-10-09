@@ -4,8 +4,9 @@
 	<ul>
 		<% @links.each do |link| %>
 			<li>
-				<a href="<%= link.url %>"><%= link.title %></a>
-					<p>Submitted by <%= link.user.email %></p>
+				<h3><a href="<%= link.url %>"><%= link.title %></a></h3>
+				<p><%= link.description %></p>
+				<p id="link-user">Submitted by <%= link.user.email %></p>
 			</li>
 		<% end %>
 	</ul>
