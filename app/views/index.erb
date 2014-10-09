@@ -1,12 +1,16 @@
+
+<article class="lists">
 <h2 id="current-links">Current links</h2>
 <ul>
 	<% @links.each do |link| %>
 		<li>
 			<a href="<%= link.url %>"><%= link.title %></a>
+				<p id="link-user">Submitted by <%= link.user.email %></p>
 		</li>
 	<% end %>
 </ul>
-
+</article>
+<article class="lists">
 <% if @tags %>
 	<h2 id="current-tags">Tags</h2>
 	<ul>
@@ -17,3 +21,4 @@
 		<% end %>
 	</ul>
 <% end %>
+</article>

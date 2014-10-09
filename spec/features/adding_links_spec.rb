@@ -3,6 +3,7 @@ require 'spec_helper'
 feature "User adds a new link" do 
 	scenario "when browsing the homepage" do
 		expect(Link.count).to eq(0)
+		sign_up("test@test.com", 'test', 'test')
 		visit '/links/new'
 		add_link("http://www.makersacademy.com/", "Makers Academy")
 		expect(Link.count).to eq(1)
@@ -12,6 +13,7 @@ feature "User adds a new link" do
 	end
 
 	scenario "with a few tags" do
+		sign_up("test@test.com", 'test', 'test')
 		visit '/links/new'
 		add_link("http://www.makerscademy.com/", "Makers Academy", ['education', 'ruby'])
 		link = Link.first

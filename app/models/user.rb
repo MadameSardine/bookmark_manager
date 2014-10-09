@@ -11,6 +11,7 @@ class User
 	property :id,				Serial
 	property :email, 			String, 	:unique => true, :message => "This email is already taken"
 	property :password_digest, 	Text
+	has n, :links, :through => Resource
 
 	validates_confirmation_of :password
 

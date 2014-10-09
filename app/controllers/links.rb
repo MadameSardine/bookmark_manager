@@ -4,7 +4,7 @@ post '/links' do
 	tags = params["tags"].split(" ").map do |tag|
 		Tag.first_or_create(:text => tag)
 	end
-	Link.create(:url => url, :title => title, :tags => tags)
+	Link.create(:url => url, :title => title, :tags => tags, :user => current_user)
 	redirect to ('/')
 end
 
