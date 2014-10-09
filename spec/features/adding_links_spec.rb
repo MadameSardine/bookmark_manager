@@ -1,7 +1,18 @@
 require 'spec_helper'
 
 feature "User adds a new link" do 
-	scenario "when browsing the homepage" do
+	scenario "can't add link if signed out" do
+		visit '/'
+		expect(page).not_to have_content('Add link')
+	end
+
+	scenario "can add link if signed up" do
+		visit '/'
+		sign_up("test@test.com", 'test', 'test')
+		expect(page).not_to have_content('Add link')
+	end
+
+	scenario "after signing up" do
 		expect(Link.count).to eq(0)
 		sign_up("test@test.com", 'test', 'test')
 		visit '/links/new'

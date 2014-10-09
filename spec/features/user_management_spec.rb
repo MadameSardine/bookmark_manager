@@ -62,3 +62,21 @@ feature 'User signs out' do
 		expect(page).not_to have_content("Welcome, test@test.com")
 	end
 end
+
+feature 'User forgets password' do
+
+	before(:each) do
+		User.create(:email => "test@test.com",
+					:password => 'test',
+					:password_confirmation => 'test')
+	end
+
+	scenario 'while being logged out' do
+		visit 'sessions/new'
+		expect(page).to have_content("I forgot my password")
+	end
+
+
+
+end
+
