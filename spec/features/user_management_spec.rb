@@ -86,8 +86,15 @@ feature 'User reset password' do
 		visit '/sessions/reset'
 		fill_in 'email', :with => "test@test.com"
 		click_button 'Send'
-		user = User.first
+		user = User.first(:email => "test@test.com")
 		expect(user.password_token.nil?).to eq(false)
+	end
+
+	scenario 'user clicks on link with token' do
+		@user = User.first
+		@user.update(:password_token => 'token_test')
+		visit '/users/reset_password/token_test'
+		expect(page).to have_content('Please enter your new password')
 	end
 
 end
