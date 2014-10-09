@@ -1,24 +1,25 @@
-
-<article class="lists">
-<h2 id="current-links">Current links</h2>
-<ul>
-	<% @links.each do |link| %>
-		<li>
-			<a href="<%= link.url %>"><%= link.title %></a>
-				<p id="link-user">Submitted by <%= link.user.email %></p>
-		</li>
-	<% end %>
-</ul>
-</article>
-<article class="lists">
-<% if @tags %>
-	<h2 id="current-tags">Tags</h2>
+<section id="content">
+	<article id="links">
+	<h2 >Current links</h2>
 	<ul>
-		<% @tags.each do |tag| %>
+		<% @links.each do |link| %>
 			<li>
-				<a href="/tags/<%= tag.text%>"><%= tag.text %></a>
+				<a href="<%= link.url %>"><%= link.title %></a>
+					<p>Submitted by <%= link.user.email %></p>
 			</li>
 		<% end %>
 	</ul>
-<% end %>
-</article>
+	</article>
+	<article id="tags">
+	<% if @tags %>
+		<h2>Tags</h2>
+		<ul>
+			<% @tags.each do |tag| %>
+				<li>
+					<a href="/tags/<%= tag.text%>"><%= tag.text %></a>
+				</li>
+			<% end %>
+		</ul>
+	<% end %>
+	</article>
+</section>

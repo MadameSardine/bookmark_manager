@@ -32,9 +32,6 @@ header h1 a {
 	font-weight: bold;
 }
 
-nav {
-	background-color: yellow;
-}
 
 header nav ul {
 	display: inline;
@@ -55,15 +52,6 @@ header nav ul li {
 	margin-bottom: 2em;
 
 }
-
-
-#current-links{
-	font-size: 1.5em;
-	margin-bottom: 1.2em;
-	border-bottom: solid 1px;
-	padding-bottom: 1em;
-}
-
 
 h1 {
 	font-size: 2em;
@@ -111,4 +99,33 @@ input[type=submit] {
 
 }
 
+#content {
+	display: inline-block;
+	width: 100%;
+	padding-left: 0.2em;
+}
 
+#content h2{
+	font-size: 1.5em;
+	margin-bottom: 1.2em;
+	border-bottom: solid 1px;
+	padding-bottom: 0.2em;
+}
+
+#links {
+	float: left;
+	width: 45%;
+}
+
+#tags {
+	float: right;
+	width: 45%;
+}
+
+#content li {
+	margin-bottom: 1.5em;
+}
+
+#content li p {
+	margin-top: 0.5em;
+}
