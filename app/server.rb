@@ -2,6 +2,7 @@ require 'sinatra'
 require 'data_mapper'
 require 'rack-flash'
 require 'sinatra/partial'
+require 'rest_client'
 
 require_relative 'models/link'
 require_relative 'models/tag'
@@ -14,6 +15,7 @@ require_relative 'controllers/sessions'
 require_relative 'controllers/links'
 require_relative 'controllers/tags'
 require_relative 'controllers/application'
+require_relative 'controllers/email.rb'
 
 
 enable :sessions
